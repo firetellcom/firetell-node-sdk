@@ -28,7 +28,7 @@ import { FiretellClientConfig } from './types/common.js';
  *
  * @example
  * ```ts
- * import { Firetell } from 'firetell-node-sdk';
+ * import { Firetell } from '@firetell/firetell-node-sdk';
  *
  * const firetell = new Firetell({
  *   domain: 'yourcompany.firetell.app',

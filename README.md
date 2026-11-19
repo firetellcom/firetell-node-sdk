@@ -1,4 +1,4 @@
-# firetell-node-sdk
+# @firetell/firetell-node-sdk
 
 Official Node.js and TypeScript SDK for the **Firetell Workspace API** — programmable voice calls, SMS/MMS messaging, Voice AI agents, knowledge bases, call recordings, transcriptions, SIP accounts, and webhooks.
 
@@ -15,15 +15,15 @@ Official Node.js and TypeScript SDK for the **Firetell Workspace API** — progr
 ## Installation
 
 ```bash
-npm install firetell-node-sdk
+npm install @firetell/firetell-node-sdk
 ```
 
 ```bash
-yarn add firetell-node-sdk
+yarn add @firetell/firetell-node-sdk
 ```
 
 ```bash
-pnpm add firetell-node-sdk
+pnpm add @firetell/firetell-node-sdk
 ```
 
 ## Quick Start
@@ -33,7 +33,7 @@ Authenticate server-to-server using your **Workspace Domain** and **API Secret K
 ### TypeScript / ESM
 
 ```ts
-import { Firetell } from 'firetell-node-sdk';
+import { Firetell } from '@firetell/firetell-node-sdk';
 
 const firetell = new Firetell({
   domain: 'yourcompany.firetell.app',
@@ -53,7 +53,7 @@ console.log('Queued message:', message.id);
 ### CommonJS (JavaScript)
 
 ```js
-const { Firetell } = require('firetell-node-sdk');
+const { Firetell } = require('@firetell/firetell-node-sdk');
 
 const firetell = new Firetell({
   domain: 'yourcompany.firetell.app',
@@ -182,7 +182,7 @@ Verify incoming `X-Webhook-Signature` headers using HMAC-SHA256 with constant-ti
 
 ```ts
 import express from 'express';
-import { constructWebhookEvent } from 'firetell-node-sdk';
+import { constructWebhookEvent } from '@firetell/firetell-node-sdk';
 
 const app = express();
 
@@ -244,7 +244,7 @@ import {
   FiretellValidationError,
   FiretellRateLimitError,
   FiretellNotFoundError,
-} from 'firetell-node-sdk';
+} from '@firetell/firetell-node-sdk';
 
 try {
   await firetell.agents.retrieve('non-existent-id');
@@ -262,6 +262,15 @@ try {
   }
 }
 ```
+
+## Documentation & References
+
+- **Workspace API Reference:** https://firetell.com/docs/developers/rest-api/overview
+- **Quickstart:** https://firetell.com/docs/developers/getting-started/quickstart
+- **Authentication:** https://firetell.com/docs/developers/getting-started/authentication
+- **Webhooks:** https://firetell.com/docs/developers/rest-api/workspace-api/webhooks
+- **SDKs Overview:** https://firetell.com/docs/developers/sdks/overview
+- **OpenAPI Playground:** https://firetell.com/docs/developers/api-playground/workspace-api
 
 ## License
 
