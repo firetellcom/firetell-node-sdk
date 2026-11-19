@@ -2,7 +2,8 @@
   "name": "@firetell/firetell-node-sdk",
   "version": "1.0.0",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "description": "Official Node.js and TypeScript SDK for the Firetell Workspace API — programmable voice calls, SMS/MMS messaging, Voice AI agents, knowledge bases, and webhooks.",
   "keywords": [
@@ -50,7 +51,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build",
+    "release": "npm run typecheck && npm run test && npm run build && npm publish --access=public --registry=https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
